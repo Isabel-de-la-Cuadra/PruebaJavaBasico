@@ -44,16 +44,19 @@ public class ClienteServicio {
 		}
 	}
 
-	public void agregarCliente(String runCliente, String nombreCliente, String apellidoCliente, String aniosCliente,
+	public List<Cliente> agregarCliente(String runCliente, String nombreCliente, String apellidoCliente, String aniosCliente,
 			CategoriaEnum nombreCategoria) {
 
 		Cliente clienteIngresado = new Cliente(runCliente, nombreCliente, apellidoCliente, aniosCliente,
 				CategoriaEnum.ACTIVO);
 
-		listaClientes.add(clienteIngresado);
-
+		if (clienteIngresado != null) {
+			listaClientes.add(clienteIngresado);
+		}
 		System.out.println("Lista de clientes " + listaClientes);
 		System.out.println();
+		
+		return listaClientes;
 
 	}
 

@@ -10,7 +10,7 @@ import modelo.CategoriaEnum;
 import modelo.Cliente;
 
 /*
- * 13. Crearla clase ArchivoServivio en el package servicio que extiende a la clase Exportador. Esta contiene
+ * 13. Crear la clase ArchivoServivio en el package servicio que extiende a la clase Exportador. Esta contiene
  * los siguientes requisitos:
  * - Crear el método cargarDatos que recibe por parámetro un String fileName, el cual indica el nombre del archivo
  * a cargar. Se deben realizar las implementaciones correspondientes al interior del método usando FileReader y
@@ -31,12 +31,13 @@ public class ArchivoServicio extends Importador {
 
 	@Override
 	public void cargarDatos(String ruta, String fileName1, List<Cliente> listaClientes) {
-		System.out.println("Ruta en ArchivoServicio " + ruta);
-		System.out.println("Nombre Archivo en ArchivoServicio " + fileName1);
-		System.out.println("listaClientes en ArchivoServicio " + listaClientes);
+		//System.out.println("Ruta en ArchivoServicio " + ruta);
+		//System.out.println("Nombre Archivo en ArchivoServicio " + fileName1);
+		//System.out.println("listaClientes en ArchivoServicio " + listaClientes);
 
 		String ArchivoALeer = (ruta + fileName1);
-		System.out.println("ArchivoALeer " + ArchivoALeer);
+		System.out.println("Ruta del Archivo a Leer " + ArchivoALeer);
+		System.out.println();
 
 		try {
 			FileReader archivoReader = new FileReader(ArchivoALeer);
@@ -52,11 +53,14 @@ public class ArchivoServicio extends Importador {
 				lineaArchivo = archivoBuffered.readLine();
 
 				listaClientes.add(clienteTemporal);
-				System.out.println("La lista de clientes desde archivo " + listaClientes);
-				System.out.println();
+				
 			}
+			
 			archivoBuffered.close();
-
+			System.out.println("Ingresé correctamente la información a tu lista de clientes");
+			System.out.println("La nueva lista de clientes es " + listaClientes);
+			System.out.println();
+			
 		} catch (FileNotFoundException fnfe) {
 			System.out.println("No encontré el archivo :O");
 		} catch (IOException ioe) {

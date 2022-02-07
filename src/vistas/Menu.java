@@ -337,7 +337,7 @@ public class Menu extends MenuTemplate {
 			ruta = scanner.nextLine();
 		}
 		
-		System.out.println("Esta es la ruta indicada: " + ruta);
+		//System.out.println("Esta es la ruta indicada: " + ruta);
 		
 		archivoServicio.cargarDatos(ruta, fileName1, clienteServicio.getListaClientes());
 	
