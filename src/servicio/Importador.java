@@ -9,7 +9,7 @@ import modelo.Cliente;
  * 
  * Germán, creo que es ilógico que ArchivoServicio extienda de la clase Abstracta Exportador, porque lo que está
  * haciendo es importar data. Es un asunto de nombrar las cosas por la palabra correcta. Así es que creé una clase
- * abstracta Importador.
+ * abstracta Importador. (ArchivoServicio usa el String fileName1, no el String fileName).
  */
 
 public abstract class Importador {

@@ -1,7 +1,7 @@
 package modelo;
 
 /*
- * Crear la clase Cliente en el package modelo, con los siguientes requisitos:
+ *4. Crear la clase Cliente en el package modelo, con los siguientes requisitos:
  * - String runCliente
  * - String nombreCliente
  * - String apellidoCliente

@@ -31,10 +31,7 @@ public class ArchivoServicio extends Importador {
 
 	@Override
 	public void cargarDatos(String ruta, String fileName1, List<Cliente> listaClientes) {
-		//System.out.println("Ruta en ArchivoServicio " + ruta);
-		//System.out.println("Nombre Archivo en ArchivoServicio " + fileName1);
-		//System.out.println("listaClientes en ArchivoServicio " + listaClientes);
-
+		
 		String ArchivoALeer = (ruta + fileName1);
 		System.out.println("Ruta del Archivo a Leer " + ArchivoALeer);
 		System.out.println();

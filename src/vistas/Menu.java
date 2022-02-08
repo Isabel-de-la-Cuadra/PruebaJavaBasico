@@ -148,9 +148,9 @@ public class Menu extends MenuTemplate {
 			if (clienteAEditar.getRunCliente().equals(runEditar)) {
 
 				if (opcion == 1) {
-					System.out.println(" Actualizaré el estado del Cliente ");
+					System.out.println("Actualizaré el estado del Cliente ");
 					System.out.println();
-					System.out.println("-El estado actual del cliente " + clienteAEditar.getNombreCliente() + " "
+					System.out.println("El estado actual del cliente " + clienteAEditar.getNombreCliente() + " "
 							+ clienteAEditar.getApellidoCliente() + " es " + clienteAEditar.getNombreCategoria());
 					System.out.println();
 					System.out.println("Ingresa 1 si deseas cambiar el estado del cliente a Inactivo");
@@ -200,7 +200,7 @@ public class Menu extends MenuTemplate {
 
 						while (nuevoRUN.isEmpty()) {
 							System.out.println("No puedes ingresar datos nulos");
-							System.out.println("Vuelve a intentar escribir el nuevo RUN del cliente "
+							System.out.println("Vuelve a intentarlo. Escribe el nuevo RUN del cliente "
 									+ clienteAEditar.getNombreCliente() + " " + clienteAEditar.getNombreCliente());
 							nuevoRUN = scanner.nextLine();
 						}
@@ -225,7 +225,7 @@ public class Menu extends MenuTemplate {
 						String nuevoNombre = scanner.nextLine();
 						while (nuevoNombre.isEmpty()) {
 							System.out.println("No puedes ingresar datos nulos");
-							System.out.println("Vuelve a intentar escribir el nuevo Nombre del cliente que se llamaba "
+							System.out.println("Vuelve a intentarlo. Escribe el nuevo Nombre del cliente que se llamaba "
 									+ clienteAEditar.getNombreCliente() + " " + clienteAEditar.getNombreCliente());
 							nuevoNombre = scanner.nextLine();
 						}
@@ -253,7 +253,7 @@ public class Menu extends MenuTemplate {
 						while (nuevoApellido.isEmpty()) {
 							System.out.println("No puedes ingresar datos nulos");
 							System.out
-									.println("Vuelve a intentar escribir el nuevo Apellido del cliente que se llamaba "
+									.println("Vuelve a intentarlo. Escribe el nuevo Apellido del cliente que se llamaba "
 											+ clienteAEditar.getNombreCliente() + " "
 											+ clienteAEditar.getNombreCliente());
 							nuevoApellido = scanner.nextLine();
@@ -279,7 +279,7 @@ public class Menu extends MenuTemplate {
 						String nuevoAnio = scanner.nextLine();
 						while (nuevoAnio.isEmpty()) {
 							System.out.println("No puedes ingresar datos nulos");
-							System.out.println("Vuelve a intentar escribir el nuevo periodo de nuestro cliente "
+							System.out.println("Vuelve a intentarlo. Escribe el nuevo periodo de nuestro cliente "
 									+ clienteAEditar.getNombreCliente() + " " + clienteAEditar.getNombreCliente());
 							nuevoAnio = scanner.nextLine();
 						}
@@ -337,8 +337,6 @@ public class Menu extends MenuTemplate {
 			ruta = scanner.nextLine();
 		}
 		
-		//System.out.println("Esta es la ruta indicada: " + ruta);
-		
 		archivoServicio.cargarDatos(ruta, fileName1, clienteServicio.getListaClientes());
 	
 	}
@@ -366,7 +364,7 @@ public class Menu extends MenuTemplate {
 		scanner.nextLine();
 
 		System.out.println("Ingresa el nombre de la carpeta donde deseas dejar el archivo");
-		System.out.println("La crearé dentro de PruebaJavaBasico");
+		System.out.println("La crearé dentro de PruebaJavaBasico.carpetaDeTrabajo");
 		String Carpeta = scanner.nextLine();
 
 		while (Carpeta == null || Carpeta.isEmpty() || Carpeta.contains(" ")) {
@@ -416,7 +414,7 @@ public class Menu extends MenuTemplate {
 
 	@Override
 	public void terminarPrograma() {
-
+		System.out.println("Gracias por usar este programa. Nos vemos en otra oportunidad ;)");
 	};
 
 	int opcion = 0;
@@ -470,7 +468,7 @@ public class Menu extends MenuTemplate {
 					utilidad.tiempoDeEspera();
 					break;
 				case 6:
-					System.out.println("Gracias por usar este programa, nos vemos en otra ocasión ;)");
+					terminarPrograma();
 					utilidad.limpiarPantalla();
 					break;
 

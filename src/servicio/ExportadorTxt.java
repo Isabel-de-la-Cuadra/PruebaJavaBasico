@@ -14,11 +14,7 @@ public class ExportadorTxt extends Exportador {
 	@Override
 	public void exportar(String directorio, String fileName, List<Cliente> listaClientes) {
 		
-		System.out.println(directorio); //Sacar más adelanta
-		System.out.println(fileName); //Sacar más adelante
-		System.out.println(listaClientes); //Sacar más adelante
-		
-		File archivo = new File(directorio + "/" +fileName + ".txt");
+	File archivo = new File(directorio + "/" +fileName + ".txt");
 		if (!archivo.exists()) {
 			try {
 				archivo.createNewFile();

@@ -15,7 +15,7 @@ public class Utilidad {
 	
 	public void tiempoDeEspera() {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			System.out.println(":| interrupción inesperada");
 			e.printStackTrace();
